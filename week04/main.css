@@ -1,0 +1,8 @@
+table {
+    /*   border-collapse: separate */
+      border-collapse: collapse;
+    }
+
+.last{
+  text-align: center;
+}
