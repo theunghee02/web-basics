@@ -10,13 +10,17 @@ header{
     width: 100%;
     height: 70px;
     background-color: #313131;
+    display: flex;
+    position: relative;
 }
 
 .menu{
+    /* menu 크기, 위치 조정 */
     width: 100%;
     height: 68px;
     background: #000000;
     position: relative;
+    /* btn들 위치 조정 */
     top: 70px;
     padding: 0 30px;
     display: flex;
@@ -39,7 +43,8 @@ header{
     padding: 7px 6px;
 }
 
-.menu>.material-icons{
+/* menu 안에 material-icons(같은 라인에 있는 코드면 띄어쓰기X) */
+.menu .material-icons{
     position: absolute;
 } 
 
@@ -58,5 +63,6 @@ nav{
     height: 1120.67px;
     background: #EEEFF3;
     top: 138px;
+    /* 안 보이게 고정 */
     transform: translate(-100%);
 }
