@@ -14,12 +14,25 @@ header{
     position: relative;
 }
 
+header ul{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+header ul li{
+    float: left;
+    cursor: pointer;
+}
+
+
+
 .menu{
     /* menu 크기, 위치 조정 */
     width: 100%;
     height: 68px;
     background: #000000;
-    position: relative;
+    position: absolute;
     /* btn들 위치 조정 */
     top: 70px;
     padding: 0 30px;
