@@ -1,0 +1,62 @@
+/* COMMON */
+
+body{
+    background: #FFFFFF;
+}
+
+/* HEADER */
+
+header{
+    width: 100%;
+    height: 70px;
+    background-color: #313131;
+}
+
+.menu{
+    width: 100%;
+    height: 68px;
+    background: #000000;
+    position: relative;
+    top: 70px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+}
+
+#btnOpen{
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 36px;
+    background: #04264c;
+    padding: 7px 6px;
+}
+
+#btnClose{
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 36px;
+    background: #48b9ee;
+    padding: 7px 6px;
+}
+
+.menu>.material-icons{
+    position: absolute;
+} 
+
+.menu .material-icons#btnOpen{
+    display: block;
+}
+
+.menu .material-icons#btnClose{
+    display: none;
+}
+
+/* SIDE MENU */
+nav{
+    position: absolute;
+    width: 100%;
+    height: 1120.67px;
+    background: #EEEFF3;
+    top: 138px;
+    transform: translate(-100%);
+}
