@@ -14,18 +14,100 @@ header{
     position: relative;
 }
 
+/* header link icons */
 header ul{
     display: flex;
+    justify-items: auto;
     align-items: center;
-    margin-left: 30px;
-}
+    margin-left: 32px;
+} 
 
 header ul li{
     float: left;
     cursor: pointer;
 }
 
+/* 경찰청 로고 */
+#logo{
+    width: 131;
+    height: 16;
+}
 
+/* 국가상징 알아보기 */
+#nationalIcon{
+    display: flex;
+
+}
+
+#nationalIcon ul{
+    margin-left: 45px;
+}
+
+#nationalIcon ul li img{
+    width: 48px;
+    height: 32.229px;
+}
+
+#nationalIcon ul li div{
+    display: flex;
+    color: white;
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+/* 보다 나은 정부 */
+#goverment{
+    width: 107px;
+    height: 41px;
+    margin-left: 20px;
+}
+
+/* 힘내라 대한민국 */
+#fighting{
+    width: 137px;
+    height: 36px;
+    margin-left: 21px;
+}
+
+#menuzoom{
+    margin: auto 0 auto 550px;
+}
+
+#english{
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#play{
+    color: #9a9a9a;
+    font-size: 5px;
+}
+
+#zoom{
+    color: #FFFFFF;
+   
+}
+
+#korean{
+    font-size: 14px;
+    border: 1px solid white;
+}
+
+#minimize{
+    width: 22px;
+    height: 22px;
+    border: 1px solid white;
+}
+
+#add{
+    width: 22px;
+    height: 22px;
+    font-size: 20px;
+    position: absolute;
+    margin-top: 9px;
+    border: 1px solid white;
+}
 
 .menu{
     /* menu 크기, 위치 조정 */
@@ -43,7 +125,7 @@ header ul li{
 #btnOpen{
     color: #FFFFFF;
     cursor: pointer;
-    font-size: 36px;
+    font-size: 39px;
     background: #04264c;
     padding: 7px 6px;
 }
@@ -51,7 +133,7 @@ header ul li{
 #btnClose{
     color: #FFFFFF;
     cursor: pointer;
-    font-size: 36px;
+    font-size: 39px;
     background: #48b9ee;
     padding: 7px 6px;
 }
