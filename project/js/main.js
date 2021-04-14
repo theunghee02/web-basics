@@ -18,4 +18,3 @@ menuCloseEl.addEventListener("click", function(){
     menuNavEl.style.transform = 'translate(-100%)'
 })
 
-

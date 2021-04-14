@@ -9,17 +9,20 @@ body{
 header{
     width: 100%;
     height: 70px;
+    display: inline-block;
     background-color: #313131;
-    display: flex;
     position: relative;
 }
 
 /* header link icons */
 header ul{
-    display: flex;
-    justify-items: auto;
-    align-items: center;
-    margin-left: 32px;
+    float: left;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto 32px;
 } 
 
 header ul li{
@@ -35,12 +38,11 @@ header ul li{
 
 /* 국가상징 알아보기 */
 #nationalIcon{
-    display: flex;
-
+    display: inline;
 }
 
 #nationalIcon ul{
-    margin-left: 45px;
+    position: flex;
 }
 
 #nationalIcon ul li img{
@@ -49,7 +51,6 @@ header ul li{
 }
 
 #nationalIcon ul li div{
-    display: flex;
     color: white;
     font-size: 10px;
     margin-left: 5px;
@@ -69,8 +70,10 @@ header ul li{
     margin-left: 21px;
 }
 
+/* 한/영 전환, 확대 축소 메뉴 */
 #menuzoom{
-    margin: auto 0 auto 550px;
+    float: right;
+    width: 76px; 
 }
 
 #english{
@@ -95,8 +98,7 @@ header ul li{
 }
 
 #minimize{
-    width: 22px;
-    height: 22px;
+    font-size: 22px;
     border: 1px solid white;
 }
 
@@ -160,4 +162,53 @@ nav{
     top: 138px;
     /* 안 보이게 고정 */
     transform: translate(-100%);
+}
+
+/* 네비게이션 메뉴 */
+header .menu .headerPrimary ul.main{
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    margin-left: 200px;
+}
+
+header .menu .headerPrimary ul.main li.item{
+    position: relative;
+    display: block;
+    width: 117.23px;
+}
+
+header .menu .headerPrimary ul.main li.item .itemTitle{
+    display: flex;
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+header .menu .headerPrimary ul.main li.item .itemTitle:hover{
+    color: #ffb71b;
+}
+
+header .menu .headerPrimary ul.main li.item .itemTitle .itemName{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+header .menu .headerPrimary ul.main li.item .itemContents{
+    position: absolute;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    display: none;
+}
+
+header .menu .headerPrimary ul.main li.item:hover .itemContents{
+    display: block;
+}
+
+header .menu .headerPrimary ul.main li.item .itemContents>ul li{
+    padding: 5px 12.5px;
+    transition: .4s;
 }
