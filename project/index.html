@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- css 리셋 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <!-- 웹 폰트 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
     <!-- css, js 파일 연결 -->
     <link rel="stylesheet" href="./css/main.css">
         <!-- defer속성은 제일 마지막에 읽어줘라는 뜻 -->
@@ -18,323 +21,383 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-    <!-- HEADER -->
+    <!-- 국가 내용 헤더 -->
+    <section class="national-common-gnb">
+        <div class="national-gnb-holder">
+            <ul>
+                <li>
+                    <!-- 경찰청 로고 -->
+                    <a href="http://127.0.0.1:5500/" id="logo">
+                <img src="https://www.police.go.kr/resources/common/images/main/logo.png" alt="logo" />
+                    </a>
+                </li>
+                <li>
+                    <!-- 국가상징 알아보기 -->
+                    <a href="https://www.mois.go.kr/frt/sub/popup/p_taegugki_banner/screen.do" id="nationalIcon">
+                        <ul>
+                            <li>
+                                <img src="https://www.police.go.kr/resources/common/images/banner/banner_taegeukgi.png" alt="태극기" />
+                            </li>
+                            <li>
+                                <div>국가상징<br>알아보기</div>
+                            </li>
+                        </ul>
+                    </a>
+                </li>
+                <li>
+                    <!-- 보다 나은 정부 -->
+                    <a href="https://www.innogov.go.kr/ucms/main/main.do" id="goverment">
+                        <img src="https://www.police.go.kr/resources/common/images/banner/banner_govindex.png" alt="내일을 위한 정부혁신, 보다 나은 정부" />
+                    </a>
+                </li>
+                <li>
+                    <img src="https://www.police.go.kr/resources/common/images/banner/go-korea.png" alt="힘내라 대한민국" id="fighting"/>
+                </li>
+            </ul>
+            <div id="menuzoom">
+                <div>
+                    <span id="english">ENGLISH</span>
+                    <span class="material-icons" id="play">
+                        play_arrow
+                    </span>
+                </div>
+                <div id="zoom">
+                    <span id="minimize">-</span>
+                    <span id="korean">가</span>
+                    <span class="material-icons" id="add">
+                        add
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 경찰청 헤더 -->
     <header>
-        <!-- header link -->
-        <ul>
-            <li>
-                <!-- 경찰청 로고 -->
-                <a href="http://127.0.0.1:5500/" id="logo">
-                    <img src="https://www.police.go.kr/resources/common/images/main/logo.png" alt="logo" />
-                </a>
-            </li>
-            <li>
-                <!-- 국가상징 알아보기 -->
-                <a href="https://www.mois.go.kr/frt/sub/popup/p_taegugki_banner/screen.do" id="nationalIcon">
+        <!-- 햄버거 바 아이콘 -->
+        <div class="material-icons" id="btnOpen">playlist_add</div>
+        <!-- 닫는 아이콘 -->
+        <div class="material-icons" id="btnClose">clear</div>
+        <!-- 네비게이션 메뉴 -->
+        <div class="headerPrimary">
+            <ul class="main-list">
+                <!-- 알림/소식 -->
+                <li class="item">
+                <div class="itemTitle">
+                    <div class="itemName">알림/소식</div>
+                </div>
+                <div class="itemContents">
                     <ul>
-                        <li>
-                            <img src="https://www.police.go.kr/resources/common/images/banner/banner_taegeukgi.png" alt="태극기" />
-                        </li>
-                        <li>
-                            <div>국가상징<br>알아보기</div>
-                        </li>
+                        <!-- 알림 -->
+                        <li>알림</li>
+                        <li>- 공지사항</li>
+                        <li>- 보도자료</li>
+                        <li>- 사실확인</li>
+                        <li>- 채용공고</li>
+                        <li>- 입찰공고</li>
+                        <!-- 소식 -->
+                        <li>소식</li>
+                        <li>- 홍보콘텐츠</li>
+                        <!-- 정책홍보실 -->
+                        <li>정책홍보실</li>
+                        <li>- 목표(비전)</li>
+                        <li>- 정책실명제</li>
+                        <li>- 수사구조개혁</li>
+                        <li>- 인권경찰</li>
+                        <!-- 경찰청 인권위원회 -->
+                        <li>경찰청 인권위원회</li>
+                        <li>- 위원장 인사말</li>
+                        <li>- 인권위원 프로필</li>
+                        <li>- 활동소식</li>
                     </ul>
-                </a>
-            </li>
-            <li>
-                <!-- 보다 나은 정부 -->
-                <a href="https://www.innogov.go.kr/ucms/main/main.do" id="goverment">
-                    <img src="https://www.police.go.kr/resources/common/images/banner/banner_govindex.png" alt="내일을 위한 정부혁신, 보다 나은 정부" />
-                </a>
-            </li>
-            <li>
-                <img src="https://www.police.go.kr/resources/common/images/banner/go-korea.png" alt="힘내라 대한민국" id="fighting"/>
-            </li>
-        </ul>
-        <div id="menuzoom">
-            <div>
-                <span id="english">ENGLISH</span>
-                <span class="material-icons" id="play">
-                    play_arrow
-                </span>
-            </div>
-            <div id="zoom">
-                <span id="minimize">-</span>
-                <span id="korean">가</span>
-                <span class="material-icons" id="add">
-                    add
-                </span>
-            </div>
+                </div>
+                </li>
+                <!-- 소통/공감 -->
+                <li class="item">
+                <div class="itemTitle">
+                    <div class="itemName">소통/공감</div>
+                </div>
+                <div class="itemContents">
+                    <ul>
+                        <!-- 생활정보 -->
+                        <li>생활정보</li>
+                        <li>- 주요뉴스</li>
+                        <!-- 적극행정 -->
+                        <li>적극행정</li>
+                        <li>- 제도소개</li>
+                        <li>- 국민참여</li>
+                        <li>- 적극행정 자료실</li>
+                        <li>- 적극행정 우수공무원</li>
+                        <!-- 소통게시판 -->
+                        <li>소통게시판</li>
+                        <li>- 자유게시판</li>
+                        <!-- 추모관 -->
+                        <li>추모관</li>
+                        <li>- 순직경찰관추모</li>
+                        <li>- 경찰영웅</li>
+                        <li>- 경찰기념공원</li>
+                        <li>- 추모관공지</li>
+                        <li>- 행사갤러리</li>
+                    </ul>
+                </div>
+                </li>
+                <!-- 신고/지원 -->
+                <li class="item">
+                <div class="itemTitle">
+                    <div class="itemName">신고/지원</div>
+                </div>
+                <div class="itemContents">
+                    <ul>
+                        <!-- 범죄신고/상담 -->
+                        <li>범죄신고/상담</li>
+                        <li>- 경찰민원포털</li>
+                        <li>- 가정,학교,성폭력 등 신고/상담
+                            <span class="material-icons-outlined">
+                                add_link
+                            </span>
+                        </li>
+                        <li>- 스마트 국민제보
+                            <span class="material-icons-outlined">
+                                add_link
+                            </span>
+                        </li>
+                        <li>- 유실물 통합포털
+                            <span class="material-icons-outlined">
+                                add_link
+                            </span>
+                        </li>
+                        <li>- 안전신문고
+                            <span class="material-icons-outlined">
+                                add_link
+                            </span>
+                        </li>
+                        <!-- 사이버안전지킴이 -->
+                        <li>사이버안전지킴이
+                            <span class="material-icons-outlined">
+                                add_link
+                            </span>
+                        </li>
+                        <li>- 사이버범죄 신고/상담
+                            <span class="material-icons-outlined">
+                                add_link
+                            </span>
+                        </li>
+                        <li>- 사이버범죄 예방교육 신청
+                            <span class="material-icons-outlined">
+                                add_link
+                            </span>
+                        </li>
+                        <li>- 인터넷 사기 의심 전화·계좌번호 조회
+                            <span class="material-icons-outlined">
+                                add_link
+                            </span>
+                        </li>
+                        <li>- 사이버범죄 예방홍보물
+                            <span class="material-icons-outlined">
+                                add_link
+                            </span>
+                        </li>
+                        <!-- 안심 서비스 -->
+                        <li>안심 서비스
+                            <span class="material-icons-outlined">
+                                add_link
+                            </span>
+                        </li>
+                        <li>- 순찰장소 신청
+                            <span class="material-icons-outlined">
+                                add_link
+                            </span>
+                        </li>
+                        <!-- 치안정보/지원 -->
+                        <li>치안정보/지원</li>
+                        <li>- 회복적경찰활동 및 범죄피해자 지원</li>
+                    </ul>
+                </div>
+                </li>
+                <!-- 정보공개 -->
+                <li class="item">
+                <div class="itemTitle">
+                    <div class="itemName">정보공개</div>
+                </div>
+                <div class="itemContents">
+                    <ul>
+                        <!-- 정보공개제도 -->
+                        <li>정보공개제도</li>
+                        <li>- 제도안내</li>
+                        <li>- 법령/서식</li>
+                        <li>- 수수료안내</li>
+                        <li>- 접수처안내</li>
+                        <li>- 정보공개편람/청구</li>
+                        <li>- 정보목록</li>
+                        <!-- 재정현황 -->
+                        <li>재정현황</li>
+                        <li>- 사업설명자료</li>
+                        <li>- 국회심의과정</li>
+                        <li>- 예산확정현황</li>
+                        <li>- 예산집행현황</li>
+                        <!-- 사전정보공표 -->
+                        <li>사전정보공표</li>
+                        <li>- 사전정보공표목록</li>
+                        <li>- 정보공개자료실</li>
+                        <li>- 비공개세부기준</li>
+                        <!-- 공공데이터 -->
+                        <li>공공데이터</li>
+                        <li>- 경찰백서</li>
+                        <li>- 공공데이터 개방</li>
+                        <li>- 경찰통계자료</li>
+                        <li>- 경찰범죄통계</li>
+                        <li>- 경찰접수 교통사고 현황</li>
+                        <li>- 통계연보</li>
+                    </ul>
+                </div>
+                </li>
+                <!-- 법령/정책 -->
+                <li class="item">
+                <div class="itemTitle">
+                    <div class="itemName">법령/정책</div>
+                </div>
+                <div class="itemContents">
+                    <ul>
+                        <!-- 법령정보 -->
+                        <li>법령정보</li>
+                        <li>- 입법예고</li>
+                        <li>- 행정예고</li>
+                        <li>- 개정법령</li>
+                        <li>- 소관법령</li>
+                        <li>- 훈령예규</li>
+                        <li>- 법령검색
+                            <span class="material-icons-outlined">
+                                add_link
+                            </span>
+                        </li>
+                        <li>- 판례검색
+                            <span class="material-icons-outlined">
+                                add_link
+                            </span>
+                        </li>
+                        <!-- 국회정보공개 -->
+                        <li>국회정보공개</li>
+                        <li>- 국회제출자료</li>
+                        <li>- 치안정책자료</li>
+                        <li>- 국회현장</li>
+                        <!-- 규제개혁 -->
+                        <li>규제개혁</li>
+                        <li>- 추진과제</li>
+                        <li>- 규제혁신</li>
+                        <li>- 규제개혁신문고</li>
+                        <li>- 규제개혁포털
+                            <span class="material-icons-outlined">
+                                add_link
+                            </span>
+                        </li>
+                        <li>- 국민 규제입증요청</li>
+                    </ul>
+                </div>
+                </li>
+                <!-- 기관소개 -->
+                <li class="item">
+                <div class="itemTitle">
+                    <div class="itemName">기관소개</div>
+                </div>
+                <div class="itemContents">
+                    <ul>
+                        <!-- 열린청장실 -->
+                        <li>열린청장실</li>
+                        <li>- 청장소개</li>
+                        <li>- 청장동정</li>
+                        <li>- 청장과의 대화</li>
+                        <li>- 역대청장소개</li>
+                        <!-- 조직안내 -->
+                        <li>조직안내</li>
+                        <li>- 조직구성도</li>
+                        <li>- 부서별연락처</li>
+                        <li>- 전국경찰관서안내</li>
+                        <li>- 관광경찰</li>
+                        <!-- 경찰의이해 -->
+                        <li>경찰의이해</li>
+                        <li>- 포돌이/포순이</li>
+                        <li>- 상징</li>
+                        <li>- 계급과 역할</li>
+                        <li>- 장비소개</li>
+                        <li>- 경찰헌장</li>
+                        <li>- 서비스헌장</li>
+                        <!-- 경찰역사 -->
+                        <li>경찰역사</li>
+                        <li>- 민주·인권·민생경찰의 뿌리</li>
+                        <li>- 경찰역사순례길</li>
+                        <li>- 역사자료실</li>
+                        <li>- 경찰조직연혁</li>
+                    </ul>
+                </div>
+                </li>
+                <!-- English -->
+                <li class="item">
+                <div class="itemTitle">
+                    <div class="itemName">ENGLISH</div>
+                </div>
+                </li>
+            </ul>
         </div>
-        <!-- 메뉴 바 -->
-        <div class="menu">
-            <!-- 햄버거 바 아이콘 -->
-            <div class="material-icons" id="btnOpen">playlist_add</div>
-            <!-- 닫는 아이콘 -->
-            <div class="material-icons" id="btnClose">clear</div>
-            <!-- 네비게이션 메뉴 -->
-            <div class="headerPrimary">
-                <ul class="main">
-                    <!-- 알림/소식 -->
-                    <li class="item">
-                    <div class="itemTitle">
-                        <div class="itemName">알림/소식</div>
-                    </div>
-                    <div class="itemContents">
-                        <ul>
-                            <!-- 알림 -->
-                            <li>알림</li>
-                            <li>- 공지사항</li>
-                            <li>- 보도자료</li>
-                            <li>- 사실확인</li>
-                            <li>- 채용공고</li>
-                            <li>- 입찰공고</li>
-                            <!-- 소식 -->
-                            <li>소식</li>
-                            <li>- 홍보콘텐츠</li>
-                            <!-- 정책홍보실 -->
-                            <li>정책홍보실</li>
-                            <li>- 목표(비전)</li>
-                            <li>- 정책실명제</li>
-                            <li>- 수사구조개혁</li>
-                            <li>- 인권경찰</li>
-                            <!-- 경찰청 인권위원회 -->
-                            <li>경찰청 인권위원회</li>
-                            <li>- 위원장 인사말</li>
-                            <li>- 인권위원 프로필</li>
-                            <li>- 활동소식</li>
-                        </ul>
-                    </div>
-                    </li>
-                    <!-- 소통/공감 -->
-                    <li class="item">
-                    <div class="itemTitle">
-                        <div class="itemName">소통/공감</div>
-                    </div>
-                    <div class="itemContents">
-                        <ul>
-                            <!-- 생활정보 -->
-                            <li>생활정보</li>
-                            <li>- 주요뉴스</li>
-                            <!-- 적극행정 -->
-                            <li>적극행정</li>
-                            <li>- 제도소개</li>
-                            <li>- 국민참여</li>
-                            <li>- 적극행정 자료실</li>
-                            <li>- 적극행정 우수공무원</li>
-                            <!-- 소통게시판 -->
-                            <li>소통게시판</li>
-                            <li>- 자유게시판</li>
-                            <!-- 추모관 -->
-                            <li>추모관</li>
-                            <li>- 순직경찰관추모</li>
-                            <li>- 경찰영웅</li>
-                            <li>- 경찰기념공원</li>
-                            <li>- 추모관공지</li>
-                            <li>- 행사갤러리</li>
-                        </ul>
-                    </div>
-                    </li>
-                    <!-- 신고/지원 -->
-                    <li class="item">
-                    <div class="itemTitle">
-                        <div class="itemName">신고/지원</div>
-                    </div>
-                    <div class="itemContents">
-                        <ul>
-                            <!-- 범죄신고/상담 -->
-                            <li>범죄신고/상담</li>
-                            <li>- 경찰민원포털</li>
-                            <li>- 가정,학교,성폭력 등 신고/상담
-                                <span class="material-icons-outlined">
-                                    add_link
-                                </span>
-                            </li>
-                            <li>- 스마트 국민제보
-                                <span class="material-icons-outlined">
-                                    add_link
-                                </span>
-                            </li>
-                            <li>- 유실물 통합포털
-                                <span class="material-icons-outlined">
-                                    add_link
-                                </span>
-                            </li>
-                            <li>- 안전신문고
-                                <span class="material-icons-outlined">
-                                    add_link
-                                </span>
-                            </li>
-                            <!-- 사이버안전지킴이 -->
-                            <li>사이버안전지킴이
-                                <span class="material-icons-outlined">
-                                    add_link
-                                </span>
-                            </li>
-                            <li>- 사이버범죄 신고/상담
-                                <span class="material-icons-outlined">
-                                    add_link
-                                </span>
-                            </li>
-                            <li>- 사이버범죄 예방교육 신청
-                                <span class="material-icons-outlined">
-                                    add_link
-                                </span>
-                            </li>
-                            <li>- 인터넷 사기 의심 전화·계좌번호 조회
-                                <span class="material-icons-outlined">
-                                    add_link
-                                </span>
-                            </li>
-                            <li>- 사이버범죄 예방홍보물
-                                <span class="material-icons-outlined">
-                                    add_link
-                                </span>
-                            </li>
-                            <!-- 안심 서비스 -->
-                            <li>안심 서비스
-                                <span class="material-icons-outlined">
-                                    add_link
-                                </span>
-                            </li>
-                            <li>- 순찰장소 신청
-                                <span class="material-icons-outlined">
-                                    add_link
-                                </span>
-                            </li>
-                            <!-- 치안정보/지원 -->
-                            <li>치안정보/지원</li>
-                            <li>- 회복적경찰활동 및 범죄피해자 지원</li>
-                        </ul>
-                    </div>
-                    </li>
-                    <!-- 정보공개 -->
-                    <li class="item">
-                    <div class="itemTitle">
-                        <div class="itemName">정보공개</div>
-                    </div>
-                    <div class="itemContents">
-                        <ul>
-                            <!-- 정보공개제도 -->
-                            <li>정보공개제도</li>
-                            <li>- 제도안내</li>
-                            <li>- 법령/서식</li>
-                            <li>- 수수료안내</li>
-                            <li>- 접수처안내</li>
-                            <li>- 정보공개편람/청구</li>
-                            <li>- 정보목록</li>
-                            <!-- 재정현황 -->
-                            <li>재정현황</li>
-                            <li>- 사업설명자료</li>
-                            <li>- 국회심의과정</li>
-                            <li>- 예산확정현황</li>
-                            <li>- 예산집행현황</li>
-                            <!-- 사전정보공표 -->
-                            <li>사전정보공표</li>
-                            <li>- 사전정보공표목록</li>
-                            <li>- 정보공개자료실</li>
-                            <li>- 비공개세부기준</li>
-                            <!-- 공공데이터 -->
-                            <li>공공데이터</li>
-                            <li>- 경찰백서</li>
-                            <li>- 공공데이터 개방</li>
-                            <li>- 경찰통계자료</li>
-                            <li>- 경찰범죄통계</li>
-                            <li>- 경찰접수 교통사고 현황</li>
-                            <li>- 통계연보</li>
-                        </ul>
-                    </div>
-                    </li>
-                    <!-- 법령/정책 -->
-                    <li class="item">
-                    <div class="itemTitle">
-                        <div class="itemName">법령/정책</div>
-                    </div>
-                    <div class="itemContents">
-                        <ul>
-                            <!-- 법령정보 -->
-                            <li>법령정보</li>
-                            <li>- 입법예고</li>
-                            <li>- 행정예고</li>
-                            <li>- 개정법령</li>
-                            <li>- 소관법령</li>
-                            <li>- 훈령예규</li>
-                            <li>- 법령검색
-                                <span class="material-icons-outlined">
-                                    add_link
-                                </span>
-                            </li>
-                            <li>- 판례검색
-                                <span class="material-icons-outlined">
-                                    add_link
-                                </span>
-                            </li>
-                            <!-- 국회정보공개 -->
-                            <li>국회정보공개</li>
-                            <li>- 국회제출자료</li>
-                            <li>- 치안정책자료</li>
-                            <li>- 국회현장</li>
-                            <!-- 규제개혁 -->
-                            <li>규제개혁</li>
-                            <li>- 추진과제</li>
-                            <li>- 규제혁신</li>
-                            <li>- 규제개혁신문고</li>
-                            <li>- 규제개혁포털
-                                <span class="material-icons-outlined">
-                                    add_link
-                                </span>
-                            </li>
-                            <li>- 국민 규제입증요청</li>
-                        </ul>
-                    </div>
-                    </li>
-                    <!-- 기관소개 -->
-                    <li class="item">
-                    <div class="itemTitle">
-                        <div class="itemName">기관소개</div>
-                    </div>
-                    <div class="itemContents">
-                        <ul>
-                            <!-- 열린청장실 -->
-                            <li>열린청장실</li>
-                            <li>- 청장소개</li>
-                            <li>- 청장동정</li>
-                            <li>- 청장과의 대화</li>
-                            <li>- 역대청장소개</li>
-                            <!-- 조직안내 -->
-                            <li>조직안내</li>
-                            <li>- 조직구성도</li>
-                            <li>- 부서별연락처</li>
-                            <li>- 전국경찰관서안내</li>
-                            <li>- 관광경찰</li>
-                            <!-- 경찰의이해 -->
-                            <li>경찰의이해</li>
-                            <li>- 포돌이/포순이</li>
-                            <li>- 상징</li>
-                            <li>- 계급과 역할</li>
-                            <li>- 장비소개</li>
-                            <li>- 경찰헌장</li>
-                            <li>- 서비스헌장</li>
-                            <!-- 경찰역사 -->
-                            <li>경찰역사</li>
-                            <li>- 민주·인권·민생경찰의 뿌리</li>
-                            <li>- 경찰역사순례길</li>
-                            <li>- 역사자료실</li>
-                            <li>- 경찰조직연혁</li>
-                        </ul>
-                    </div>
-                    </li>
-                    <!-- English -->
-                    <li class="item">
-                    <div class="itemTitle">
-                        <div class="itemName">ENGLISH</div>
-                    </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <!-- SIDE MENU -->
+        <nav id="navMenu"></nav>
     </header>
-    <!-- SIDE MENU -->
-    <nav id="navMenu"></nav>
+    <!-- 메인 -->
+    <main>
+        <div class="social-links">
+
+        </div>
+    </main>
+    <!-- 콘텐츠 -->
+    <section id="contents">
+        <span class="sentence-nation">
+            <h2>국민과 소통하는<br>따뜻하고 믿음직한<br>경찰로 국민과 함께<br>하겠습니다</h2>
+        </span>
+        <div class="slick-list">
+
+        </div>
+    </section>
+    <!-- 유용한 정보(슬라이드) -->
+    <section class="useful-info">
+        <div class="useful-info-slide">
+            
+        </div>
+    </section>
+    <!-- 세 가지 경찰 -->
+    <section class="human-police">
+        <span class="sentence-police">
+            <h2>든든한 이웃경찰<br>당당한 책임경찰<br>따뜻한 공감경찰</h2>
+        </span>
+        <ul class="list-box">
+            <li class="item1"></li>
+            <li class="item2"></li>
+            <li class="item3"></li>
+        </ul>
+    </section>
+    <!-- 자주 찾는 서비스 -->
+    <section class="favorite-links">
+        <div class="inner">
+            <h2 class="favorite-title">자주 찾는 서비스</h2>
+        </div>
+    </section>
+    <!-- 열린 행정 -->
+    <section class="open-admin">
+        <div class="inner">
+            <h2 class="open-admin-title">
+                <div class="title">국민을 향한 열린 행정</div>
+                <div class="explain">경찰의 다양한 소식과 정보를 전하며 국민을 향한 열린 행정을 위해 노력합니다</div>
+            </h2>
+        </div>
+    </section>
+    <!-- 푸터 -->
+    <footer>
+        <div class="related-links">
+
+        </div>
+        <div class="footer-menu">
+
+        </div>
+        <div class="footer-info">
+            <div class="inner"></div>
+        </div>
+    </footer>
 </body>
 </html>

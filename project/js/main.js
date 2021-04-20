@@ -9,12 +9,12 @@ const menuNavEl = document.getElementById("navMenu")
 menuOpenEl.addEventListener("click", function(){
     menuOpenEl.style.display = 'none'
     menuCloseEl.style.display = 'block'
-    menuNavEl.style.transform = 'translate(0)'
+    menuNavEl.style.transform = 'block'
 })
 
 menuCloseEl.addEventListener("click", function(){
     menuCloseEl.style.display = 'none'
     menuOpenEl.style.display = 'block'
-    menuNavEl.style.transform = 'translate(-100%)'
+    menuNavEl.style.transform = 'none'
 })
 

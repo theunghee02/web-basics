@@ -2,16 +2,42 @@
 
 body{
     background: #FFFFFF;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 /* HEADER */
+.national-common-gnb {
+    width: 100%;
+    height: 70px;
+    background-color: #313131;
+    font-size: 400;
+    position: absolute;
+    z-index: 3;
+    display: flex;
+}
+
+.national-common-gnb .national-gnb-holder {
+    width: 1200px;
+    height: 61.667px;
+    margin: 0 auto;
+}
 
 header{
     width: 100%;
-    height: 70px;
-    display: inline-block;
-    background-color: #313131;
-    position: relative;
+    height: 68px;
+    font-weight: 300;
+    background-color: #000000;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    /* btn들 위치 조정 */
+    top: 70px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 /* header link icons */
@@ -111,19 +137,6 @@ header ul li{
     border: 1px solid white;
 }
 
-.menu{
-    /* menu 크기, 위치 조정 */
-    width: 100%;
-    height: 68px;
-    background: #000000;
-    position: absolute;
-    /* btn들 위치 조정 */
-    top: 70px;
-    padding: 0 30px;
-    display: flex;
-    align-items: center;
-}
-
 #btnOpen{
     color: #FFFFFF;
     cursor: pointer;
@@ -159,9 +172,11 @@ nav{
     width: 100%;
     height: 1120.67px;
     background: #EEEFF3;
-    top: 138px;
+    top: 68px;
+    left: 0;
+    right: 0;
     /* 안 보이게 고정 */
-    transform: translate(-100%);
+    display: none;
 }
 
 /* 네비게이션 메뉴 */
@@ -211,4 +226,201 @@ header .menu .headerPrimary ul.main li.item:hover .itemContents{
 header .menu .headerPrimary ul.main li.item .itemContents>ul li{
     padding: 5px 12.5px;
     transition: .4s;
+}
+
+/* MAIN */
+
+main {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: orange;
+    z-index: 1;
+}
+
+.social-links{
+    width: 1058px;
+    height: 48px;
+    top: 546px;
+    left: 631.667px;
+    bottom: 30px;
+    margin-left: -529px ;
+    background-color: #313131;
+    position: absolute;
+    z-index: 4;
+}
+
+/* 콘텐츠 */
+#contents{
+    width: 1200px;
+    height: 364px;
+    background-color: lightgreen;
+    margin: 0 auto;
+    padding: 46px 0 38px 0;
+    box-sizing: border-box;
+}
+
+#contents .sentence-nation{
+    width: 290px;
+    height: 130.667px;
+    background-color: lavenderblush;
+    position: absolute;
+    font-size: 30px;
+    font-weight: 400;
+    color: #092642;
+}
+
+#contents .slick-list{
+    width: 915px;
+    height: 280px;
+    background-color: #48b9ee;
+    margin: 0 -10px;
+    float: right;
+    box-sizing: border-box;
+}
+
+/* 유용한 정보(슬라이드) */
+.useful-info{
+    width: 100%;
+    height: 350px;
+    background-color: lightpink;
+}
+
+.useful-info .useful-info-slide{
+    width: 1200px;
+    height: 350px;
+    padding: 46px 0 38px 0;
+    box-sizing: border-box;
+    background-color: #313131;
+    margin: 0 auto;
+}
+
+/* 세 가지 경찰 */
+.human-police{
+    width: 1200px;
+    height: 364px;
+    background-color: lightsalmon;
+    margin: 0 auto;
+    padding: 46px 0 38px 0;
+    box-sizing: border-box;
+}
+
+.human-police .sentence-police {
+    width: 290px;
+    height: 98px;
+    background-color: lavenderblush;
+    position: absolute;
+    font-size: 30px;
+    font-weight: 400;
+    color: #092642;
+}
+
+.human-police .list-box{
+    width: 895px;
+    height: 280px;
+    background-color: gold;
+    float: right;
+}
+
+/* 자주 찾는 서비스 */
+.favorite-links{
+    width: 100%;
+    height: 330.667px;
+    background-color: #e8edee;
+    background-image: url(https://www.police.go.kr/resources/common/images/sub_visual1.jpg);
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
+}
+
+.favorite-links .inner{
+    width: 1200px;
+    height: 330.667px;
+    padding: 46px 0 38px 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: goldenrod;
+}
+
+.favorite-links .inner .favorite-title{
+    width: 1200px;
+    height: 32.667px;
+    font-size: 30px;
+    font-weight: 400;
+    color: #FFF;
+}
+
+/* 열린 행정 */
+.open-admin{
+    width: 100%;
+    height: 364px;
+    background-color: #eef0f6;
+}
+
+.open-admin .inner{
+    width: 1200px;
+    height: 364px;
+    padding: 46px 0 38px 0;
+    box-sizing: border-box;
+    background-color: khaki;
+    margin: 0 auto;
+}
+
+.open-admin .inner .open-admin-title{
+    width: 1200px;
+    height: 57px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.open-admin .inner .open-admin-title .title{
+    font-size: 30px;
+    font-weight: 400;
+    color: #092642;
+}
+
+.open-admin .inner .open-admin-title .explain{
+    font-size: 14px;
+    color: #717171;
+    width: 1200px;
+    height: 15.333px;
+    margin-top: 9px;
+}
+
+/* 푸터 */
+footer{
+    width: 100%;
+    height: 242.667px;
+    background-color: lavender;
+}
+
+footer .related-links{
+    width: 100%;
+    height: 66px;
+    padding: 13px 0;
+    box-sizing: border-box;
+    border-top: 1px solid #e3e3e3;
+    background-color: #FFFFFF;
+}
+
+footer .footer-menu{
+    background-color: #30343f;
+    width: 100%;
+    height: 44px;
+}
+
+footer .footer-info{
+    width: 100%;
+    height: 131.667px;
+    background-color: #3b414d;
+}
+
+footer .footer-info .inner{
+    width: 1200px;
+    height: 131.667px;
+    padding: 18px 0 22px 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: #FFFFFF;
 }
