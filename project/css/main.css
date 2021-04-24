@@ -6,22 +6,6 @@ body{
 }
 
 /* HEADER */
-.national-common-gnb {
-    width: 100%;
-    height: 70px;
-    background-color: #313131;
-    font-size: 400;
-    position: absolute;
-    z-index: 3;
-    display: flex;
-}
-
-.national-common-gnb .national-gnb-holder {
-    width: 1200px;
-    height: 61.667px;
-    margin: 0 auto;
-}
-
 header{
     width: 100%;
     height: 68px;
@@ -31,6 +15,7 @@ header{
     top: 70px;
     left: 0;
     z-index: 2;
+    opacity: .3;
     display: flex;
     /* btn들 위치 조정 */
     top: 70px;
@@ -41,25 +26,36 @@ header{
 }
 
 /* header link icons */
-header ul{
-    float: left;
+.national-common-gnb {
+    width: 100%;
+    height: 70px;
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto 32px;
-} 
+    z-index: 2;
+    display: flex;
+}
 
-header ul li{
-    float: left;
-    cursor: pointer;
+.national-common-gnb .national-gnb-holder{
+    width: 1200px;
+    height: 61.667px;
+    margin: 0 auto;
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
 }
 
 /* 경찰청 로고 */
-#logo{
-    width: 131;
-    height: 16;
+.national-common-gnb .national-gnb-holder #logo{
+    width: 161;
+    height: 46;
+    margin-top: 14px;
+    position: relative;
+    margin-left: 31.667px;
+}
+
+.national-common-gnb .national-gnb-holder ul li{
+    float: left;
+    list-style: none;
+    position: relative;
 }
 
 /* 국가상징 알아보기 */
@@ -71,12 +67,12 @@ header ul li{
     position: flex;
 }
 
-#nationalIcon ul li img{
+#nationalIcon img{
     width: 48px;
     height: 32.229px;
 }
 
-#nationalIcon ul li div{
+#nationalIcon div{
     color: white;
     font-size: 10px;
     margin-left: 5px;
@@ -97,6 +93,11 @@ header ul li{
 }
 
 /* 한/영 전환, 확대 축소 메뉴 */
+.national-common-gnb .national-gnb-holder #menuzoom{
+    display: block;
+    float: right;
+}
+
 #menuzoom{
     float: right;
     width: 76px; 
@@ -136,7 +137,7 @@ header ul li{
     margin-top: 9px;
     border: 1px solid white;
 }
-
+/* 햄버거 바 아이콘 */
 #btnOpen{
     color: #FFFFFF;
     cursor: pointer;
@@ -153,16 +154,15 @@ header ul li{
     padding: 7px 6px;
 }
 
-/* menu 안에 material-icons(같은 라인에 있는 코드면 띄어쓰기X) */
-.menu .material-icons{
+header .material-icons{
     position: absolute;
 } 
 
-.menu .material-icons#btnOpen{
+header .material-icons#btnOpen{
     display: block;
 }
 
-.menu .material-icons#btnClose{
+header .material-icons#btnClose{
     display: none;
 }
 
@@ -180,20 +180,20 @@ nav{
 }
 
 /* 네비게이션 메뉴 */
-header .menu .headerPrimary ul.main{
+header .headerPrimary ul{
     position: relative;
     display: flex;
     flex-grow: 1;
     margin-left: 200px;
 }
 
-header .menu .headerPrimary ul.main li.item{
+header .headerPrimary ul li.item{
     position: relative;
     display: block;
     width: 117.23px;
 }
 
-header .menu .headerPrimary ul.main li.item .itemTitle{
+header .headerPrimary ul li.item .itemTitle{
     display: flex;
     height: 64px;
     align-items: center;
@@ -202,16 +202,16 @@ header .menu .headerPrimary ul.main li.item .itemTitle{
     color: #FFFFFF;
 }
 
-header .menu .headerPrimary ul.main li.item .itemTitle:hover{
+header .headerPrimary ul li.item .itemTitle:hover{
     color: #ffb71b;
 }
 
-header .menu .headerPrimary ul.main li.item .itemTitle .itemName{
+header .headerPrimary ul li.item .itemTitle .itemName{
     font-size: 17px;
     font-weight: 500;
 }
 
-header .menu .headerPrimary ul.main li.item .itemContents{
+header .headerPrimary ul li.item .itemContents{
     position: absolute;
     width: 100%;
     font-size: 15px;
@@ -219,11 +219,7 @@ header .menu .headerPrimary ul.main li.item .itemContents{
     display: none;
 }
 
-header .menu .headerPrimary ul.main li.item:hover .itemContents{
-    display: block;
-}
-
-header .menu .headerPrimary ul.main li.item .itemContents>ul li{
+header .headerPrimary ul li.item .itemContents>ul li{
     padding: 5px 12.5px;
     transition: .4s;
 }
@@ -232,59 +228,319 @@ header .menu .headerPrimary ul.main li.item .itemContents>ul li{
 
 main {
     width: 100%;
-    height: 100vh;
+    height: 644.583px;
     top: 0;
     left: 0;
-    background-color: orange;
+    background-color: #fff3ff;
     z-index: 1;
+    position: relative;
 }
 
-.social-links{
+main img{
+    width: 100%;
+    height: 644.583px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+    /* 슬라이드 화살표 */
+        /* 왼쪽 */
+main .left-control{
+    width: 126.333px;
+    height: 624px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 5;
+    cursor: pointer;
+}
+
+main .left-control span{
+    font-size: 70px;
+    color: lightgray;
+    top: 312px;
+    right: 23.167px;
+    bottom: 272px;
+    left: 63.167px;
+    margin: -10px 0 0 -10px;
+    position: absolute;
+}
+
+main .left-control span:hover{
+    color: #fff;
+}
+        /* 오른쪽 */
+main .right-control{
+    width: 126.333px;
+    height: 624px;
+    top: 0;
+    right: 0;
+    position: absolute;
+    z-index: 5;
+    cursor: pointer;
+    float: right;
+}
+
+main .right-control span{
+    font-size: 70px;
+    color: lightgray;
+    top: 312px;
+    right: 63.167px;
+    bottom: 272px;
+    left: 23.167px;
+    margin: -10px -10px 0 0;
+    position: absolute;
+}
+
+main .right-control span:hover{
+    color: #fff;
+}
+    /* 일시정지 */
+main #main-pause{
+    width: 24px;
+    height: 24px;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 15px;
+    background-color: #384047;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 490px auto;
+    color: #fff;
+
+}
+
+    /* 슬라이드 지표 */
+main .slide-indicator{
+    width: 1156.670px;
+    height: 22px;
+    position: absolute;
+    top: 380px;
+    bottom: 312px;
+    right: 0;
+    left: 631.667px;
+    margin-left: -525px;
+    margin-bottom: -90px;
+    z-index: 5;
+    list-style: none;
+}
+
+main .slide-indicator li{
+    float: left;
+    margin: 2px;
+}
+
+main .slide-indicator .indicator1{
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+}
+
+main .slide-indicator .indicator2{
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+}
+
+main .slide-indicator .indicator3{
+    width: 60px;
+    height: 4px;
+    background-color: #ff4f00;
+}
+
+    /* 소셜네트워크 링크 */
+main .social-links{
     width: 1058px;
     height: 48px;
     top: 546px;
     left: 631.667px;
     bottom: 30px;
+    right: 0;
     margin-left: -529px ;
-    background-color: #313131;
     position: absolute;
     z-index: 4;
 }
+    /* 경찰청의 다양한 이야기 */
+main .social-links .social-sentence{
+    font-size: 18px;
+    color: #fff;
+    width: 300px;
+    height: 46.667px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 0;
+    box-sizing: border-box;
+    position: absolute;
+    margin: auto 0;
+}
+
+    /* 연결선 */
+main .social-links .line{
+    width: 750px;
+    height: 1px;
+    top: 24px;
+    right: 7px;
+    bottom: 23px;
+    left: 301px;
+    background-color: #fff;
+    position: absolute;
+}
+
+    /* 링크 */
+main .social-links ul{
+    width: 413px;
+    height: 48px;
+    /* background-color: blueviolet; */
+    position: relative;
+    float: right;
+    list-style: none;
+    z-index: 5;
+}
+
+main .social-links ul li{
+    float: left;
+    margin-left: 11px;
+    cursor: pointer;
+    z-index: 6;
+    width: 48px;
+    height: 48px;
+    border-radius: 70%;
+    border: 2px;
+}
+
+main .social-links ul li .link-list{
+    background-image: url(https://www.police.go.kr/resources/common/images/main/sns_sprite.png);
+}
+
+main .social-links li.youtube a{
+    background-position: -96px center;
+}
+
+main .social-links li.facebook a{
+    background-position: 0 center;
+}
+
+main .social-links li.twitter a{
+    background-position: -48px center;
+}
+
+main .social-links li.blog a{
+    background-position: -144px center;
+}
+
+main .social-links li.instagram a{
+    background-position: -240px center;
+}
+
+main .social-links li.band a{
+    background-position: -288px center;
+}
+
+main .social-links li.kakaostory a{
+    background-position: -336px center;
+}
 
 /* 콘텐츠 */
-#contents{
+section#contents{
     width: 1200px;
     height: 364px;
-    background-color: lightgreen;
     margin: 0 auto;
     padding: 46px 0 38px 0;
     box-sizing: border-box;
 }
 
-#contents .sentence-nation{
+    /* 왼쪽 문장 */
+section#contents .sentence-nation{
     width: 290px;
     height: 130.667px;
-    background-color: lavenderblush;
     position: absolute;
     font-size: 30px;
     font-weight: 400;
     color: #092642;
 }
 
-#contents .slick-list{
+    /* 오른쪽 메뉴 */
+section .slick-list{
     width: 915px;
     height: 280px;
-    background-color: #48b9ee;
     margin: 0 -10px;
     float: right;
     box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-items: center;
+    align-items: center;
+}
+
+section .slick-list .grid{
+    width: 283px;
+    height: 278px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #313131;
+    border: 1px solid #e7e7e7;
+    font-size: 15px;
+}
+
+        /* 이미지 */
+section .slick-list .grid img{
+    display: block;
+    margin: 0 auto;
+    margin-top: 16px;
+}
+        /* 문장 */
+section .slick-list .grid .contents{
+    width: 283px;
+    height: 70.667px;
+
+}
+
+section .slick-list .grid .contents .title{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 13px;
+}
+
+section .slick-list .grid .contents .sentence{
+    font-size: 15px;
+    font-weight: 400;
+    color: #939393;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 13px;
+    line-height: 130%;
+}
+        /* 자세히 보기 */
+section .slick-list .grid .closely{
+    width: 199px;
+    height: 35px;
+    box-sizing: border-box;
+    padding: 6px;
+    border: 1px solid #5d5d5d;
+    margin: 25px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #515151;
+    cursor: pointer;
 }
 
 /* 유용한 정보(슬라이드) */
 .useful-info{
     width: 100%;
     height: 350px;
-    background-color: lightpink;
+    background-color: #e8edee;
+    position: relative;
 }
 
 .useful-info .useful-info-slide{
@@ -292,15 +548,136 @@ main {
     height: 350px;
     padding: 46px 0 38px 0;
     box-sizing: border-box;
-    background-color: #313131;
     margin: 0 auto;
+}
+
+.useful-info span{
+    color: lightgray;
+    cursor: pointer;
+}
+
+.useful-info span:hover{
+    color: gray;
+}
+
+.useful-info #useful-left{
+    left: -27px;
+    width: 70px;
+    height: 70px;
+    font-size: 70px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+.useful-info #useful-right{
+    right: -27px;
+    width: 70px;
+    height: 70px;
+    font-size: 70px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    z-index: 3;
+}
+
+.useful-info .useful-info-slide{
+    display: flex;
+    justify-content: center;
+}
+
+.useful-info .useful-info-slide ul{
+    width: 1200px;
+    height: 266px;
+}
+
+.useful-info .useful-info-slide ul li{
+    width: 294px;
+    height: 266px;
+    margin: 0 3px;
+    float: left;
+    background-color: #fff;
+}
+
+.useful-info .useful-info-slide ul li a{
+    width: 294px;
+    height: 184px;
+}
+
+.useful-info .useful-info-slide ul li .useful-sentence{
+    width: 294px;
+    height: 81px;
+    padding: 9px 16px;
+    box-sizing: border-box;
+    border-top: 1px solid #c7c7c7;
+}
+
+.useful-info .useful-info-slide ul li .useful-sentence h2{
+    font-size: 19px;
+    color: #222;
+    font-weight: 700;
+}
+
+.useful-info .useful-info-slide ul li .useful-sentence .sentence{
+    font-size: 12px;
+    color: #939393;
+    margin-top: 10px;
+    font-weight: 400;
+    position: absolute;
+}
+
+.useful-info .number{
+    width: 82px;
+    height: 33px;
+    padding: 7px;
+    top: 317px;
+    box-sizing: border-box;
+    position: absolute;
+    background-color: #384047;
+    opacity: .8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 12px;
+}
+
+.useful-info .number .num1{
+    color: #fbcd32;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.useful-info .number .num11{
+    color: #ffffff;
+    font-size: 12px;
+    display: inline-block;
+}
+
+.useful-info #useful-play{
+    display: inline-block;
+    width: 34px;
+    height: 33px;
+    top: 317px;
+    left: 677px;
+    background-color: #384047;
+    opacity: .8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.useful-info #useful-play:hover{
+    opacity: 1;
 }
 
 /* 세 가지 경찰 */
 .human-police{
     width: 1200px;
     height: 364px;
-    background-color: lightsalmon;
     margin: 0 auto;
     padding: 46px 0 38px 0;
     box-sizing: border-box;
@@ -309,25 +686,42 @@ main {
 .human-police .sentence-police {
     width: 290px;
     height: 98px;
-    background-color: lavenderblush;
     position: absolute;
     font-size: 30px;
     font-weight: 400;
     color: #092642;
 }
 
-.human-police .list-box{
-    width: 895px;
-    height: 280px;
-    background-color: gold;
-    float: right;
+.human-police .slick-list .grid .right{
+    margin: 0;
+    width: 281px;
+}
+
+.human-police .slick-list .grid .independent{
+    margin-top: 25px;
+}
+
+.human-police .slick-list .grid .contents #independent-title{
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.human-police .slick-list .grid .contents #independent-sentence{
+    margin-bottom: 20px;
+}
+
+.human-police .slick-list .grid .closely{
+    height: 35px;
+}
+
+.human-police .slick-list .grid .investigation{
+    margin-top: 25px;
 }
 
 /* 자주 찾는 서비스 */
 .favorite-links{
     width: 100%;
     height: 330.667px;
-    background-color: #e8edee;
     background-image: url(https://www.police.go.kr/resources/common/images/sub_visual1.jpg);
     background-position-x: 50%;
     background-position-y: 50%;
@@ -340,7 +734,6 @@ main {
     padding: 46px 0 38px 0;
     box-sizing: border-box;
     margin: 0 auto;
-    background-color: goldenrod;
 }
 
 .favorite-links .inner .favorite-title{
@@ -363,7 +756,6 @@ main {
     height: 364px;
     padding: 46px 0 38px 0;
     box-sizing: border-box;
-    background-color: khaki;
     margin: 0 auto;
 }
 
@@ -388,6 +780,70 @@ main {
     margin-top: 9px;
 }
 
+.open-admin .inner .notice-list-left{
+    width: 439px;
+    height: 143px;
+    display: inline-block;
+    position: relative;
+    margin-top: 50px;
+}
+
+.open-admin .inner .notice-list-right{
+    width: 439px;
+    height: 143px;
+    display: inline-flex;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.open-admin .inner .campaign{
+    width: 282px;
+    height: 189px;
+    margin-left: 20px;
+    float: right;
+    border: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    background-color: #fff;
+}
+
+.open-admin .inner .campaign .total-material{
+    display: block;
+    float: right;
+}
+
+.open-admin .inner .campaign .total-material .material-icons{
+    width: 34px;
+    height: 33px;
+    background-color: #384047;
+    display: inline-flex;
+    position: relative;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    opacity: .8;
+    bottom: 35px;
+    right: 0;
+}
+
+.open-admin .inner .campaign .total-material .material-icons:hover{
+    opacity: 1;
+}
+
+.open-admin .inner .campaign .campaign-title{
+    width: 280px;
+    height: 42px;
+    padding: 9px 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
 /* 푸터 */
 footer{
     width: 100%;
@@ -404,10 +860,117 @@ footer .related-links{
     background-color: #FFFFFF;
 }
 
+footer .related-links .inner{
+    width: 100%;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+footer .related-links .inner .dropup{
+    width: 283px;
+    height: 40px;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    border: 1px solid #c2c2c2;
+    display: inline-flex;
+    align-items: center;
+    color: #6c6c6c;
+    font-size: 14px;
+    position: relative;
+    margin-right: 7px;
+    cursor: pointer;
+}
+
+footer .related-links .inner .dropup .material-icons{
+    position: absolute;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    top: 8px;
+    right: 5px;
+    bottom: 8px;
+    left: 254px;
+}
+
+footer .related-links .inner span.material-icons{
+    width: 40px;
+    height: 40px;
+    background-color: #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: #fff;
+}
+
 footer .footer-menu{
     background-color: #30343f;
     width: 100%;
     height: 44px;
+}
+
+footer .footer-menu .inner{
+    width: 1200px;
+    height: 44px;
+    margin: 0 auto;
+}
+
+footer .footer-menu .inner ul.inner1{
+    list-style: none;
+    font-size: 14px;
+    color: #d0d1d2;
+    width: 733.885px;
+    height: 44px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer-menu .inner ul.inner1 li{
+    padding: 11px 0;
+    float: left;
+    margin-right: 17.5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .footer-menu .inner ul.inner1 li#personal-info{
+    color: #fbcd32;
+}
+
+footer .footer-menu .inner ul.inner1 li .material-icons{
+    font-size: 12.5px;
+    color: #626363;
+}
+
+footer .footer-menu .inner ul.inner2{
+    width: 259px;
+    height: 30px;
+    margin-top: 8px;
+    display: block;
+    float: right;
+}
+
+footer .footer-menu .inner ul.inner2 li{
+    list-style: none;
+    float: left;
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-left: 7px;
+}
+
+footer .footer-menu .inner ul.inner2 li a{
+    background: #4e555f url(../images/sns_sprite.png) no-repeat 0 0;
+    border-radius: 100%;
+}
+
+footer .footer-menu .inner ul.inner2 li.youtube a{
+    background-position: -60px 0;
 }
 
 footer .footer-info{
@@ -422,5 +985,116 @@ footer .footer-info .inner{
     padding: 18px 0 22px 0;
     box-sizing: border-box;
     margin: 0 auto;
-    background-color: #FFFFFF;
+    position: relative;
+}
+
+/* 경찰청 심볼 */
+footer .footer-info .inner .symbol{
+    width: 65px;
+    height: 91px;
+    margin-right: 35px;
+    font-size: 14px;
+    left: 0;
+    position: absolute;
+    background: url(https://www.police.go.kr/resources/common/images/footer_symbol.png)
+}
+
+footer .footer-info .inner .left-content{
+    height: 87.531px;
+    position: relative;
+    left: 100px;
+    display: inline-block;
+}
+
+footer .footer-info .inner .left-content .address{
+    margin-top: 10px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+    height: 22.531px;
+    display: flex;
+    align-items: center;
+}
+
+footer .footer-info .inner .left-content .address .way{
+    color: #fbcd32;
+}
+
+footer .footer-info .inner .left-content .copyright{
+    color: #b8c4d1;
+    height: 20.667px;
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+footer .footer-info .inner .left-content .notice{
+    color: #99a9c8;
+    font-size: 13px;
+    margin-top: 15px;
+    height: 19.333px;
+    display: flex;
+    align-items: center;
+}
+
+
+footer .footer-info .inner .right-content{
+    width: 270px;
+    height: 91.667px;
+    display: block;
+    float: right;
+}
+
+footer .footer-info .inner .right-content .mark{
+    height: 86.667px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+footer .footer-info .inner .right-content .mark .mobile-links{
+    width: 66px;
+    height: 86.667px;
+    position: relative;
+}
+
+footer .footer-info .inner .right-content .mark .mobile-links img{
+    height: 66px;
+    width: 66px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+footer .footer-info .inner .right-content .mark .mobile-links div{
+    display: inline-block;
+    font-size: 11px;
+    color: #fff;
+    font-weight: 400;
+    position: relative;
+}
+
+footer .footer-info .inner .right-content .mark .web-watch{
+    width: 70px;
+    height: 59.667px;
+    margin-left: 24px;
+}
+
+footer .footer-info .inner .right-content .mark .web-watch img{
+    width: 70px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+footer .footer-info .inner .right-content .mark .e-privacy{
+    width: 63px;
+    height: 65.938px;
+    margin-left: 17px;
+}
+
+footer .footer-info .inner .right-content .mark .e-privacy img{
+    width: 63px;
+    height: 61.271px;
 }
